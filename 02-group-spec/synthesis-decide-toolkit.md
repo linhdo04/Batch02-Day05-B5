@@ -1,85 +1,82 @@
-# Toolkit — Từ Evidence Đến Build Slice
+# Từ Evidence Đến Build Slice
 
-Dùng sau khi nhóm đã có evidence. Mục tiêu là chốt một build slice đủ nhỏ cho Day 06.
+## 1. Cụm evidence
 
-## 1. Gom evidence thành cụm
+Các cụm evidence chính cần được giữ lại:
 
-Gom theo **workflow/pain**, không gom theo tên feature.
+- "Mất thời gian so sánh vé trên nhiều nền tảng"
+- "Khó quyết nhanh vì phải tự cân giữa giá, giờ đi và điểm đón"
+- "Điểm đón là yếu tố quyết định nhưng khó nhìn ra lựa chọn nào gần"
+- "AI có thể hiểu sai địa danh hoặc tên nhà xe, dẫn đến chọn nhầm điểm đón"
 
-Ví dụ cụm tốt:
+## 2. Insight
 
-- "Không biết chọn chuyên khoa"
-- "Không hiểu vì sao bị tính phí"
-- "Muốn sửa output nhưng không có chỗ sửa"
-- "Bot trả lời tự tin nhưng không dẫn nguồn"
-
-## 2. Viết insight
-
-Form:
+Insight cốt lõi của nhóm:
 
 ```text
-User [segment] không chỉ cần [surface need].
-Họ thật ra cần [deeper need],
-vì [evidence pattern].
+Người đi tỉnh định kỳ không chỉ cần danh sách vé liên tỉnh.
+Họ thật ra cần một trợ lý giúp rút ngắn thời gian ra quyết định,
+vì evidence cho thấy họ đang phải tự so giá, lọc giờ và kiểm tra điểm đón trên nhiều nền tảng.
 ```
 
-Ví dụ:
+Diễn giải ngắn gọn:
 
 ```text
-Người lần đầu đi khám không chỉ cần danh sách chuyên khoa.
-Họ cần hỗ trợ ra quyết định an toàn,
-vì nhiều review/observation cho thấy họ không biết triệu chứng của mình nên đi khoa nào.
+User không thiếu lựa chọn vé.
+Điều họ thiếu là hỗ trợ so sánh theo trade-off thật của chuyến đi,
+vì một lựa chọn rẻ hơn chưa chắc tốt hơn nếu giờ đi lệch hoặc điểm đón quá xa.
 ```
 
-## 3. Viết opportunity
+## 3. Opportunity
 
-Form:
+Opportunity phù hợp với evidence hiện có:
 
 ```text
-Cơ hội là dùng AI để [augment/automate hành động hẹp],
-giúp user [kết quả],
-trong khi vẫn kiểm soát [failure/risk].
+Cơ hội là dùng AI để augment việc xếp hạng top 3 vé theo giá, giờ đi và độ gần điểm đón,
+giúp user ra quyết định nhanh hơn,
+trong khi vẫn kiểm soát rủi ro nhập nhằng địa danh/nhà xe bằng bước xác nhận.
 ```
 
 ## 4. Chọn build slice
 
-Build slice tốt phải qua 5 câu hỏi:
+Build slice được chọn cần trả lời rõ 5 câu hỏi sau:
 
-| Câu hỏi | Đạt khi |
-|---|---|
-| User cụ thể chưa? | Nói được ai dùng, trong bối cảnh nào. |
-| Task đủ hẹp chưa? | Demo được trong 3-5 phút. |
-| AI decision rõ chưa? | AI gợi ý/tự làm một việc cụ thể. |
-| Failure path rõ chưa? | Có một case AI không chắc hoặc sai để test. |
-| Có evidence không? | Có bằng chứng từ self-use/review/user/competitor. |
+| Câu hỏi               | Đạt khi                                                                                       |
+| --------------------- | --------------------------------------------------------------------------------------------- |
+| User cụ thể chưa?     | Có: người đi tỉnh định kỳ đang cần chọn vé liên tỉnh nhanh và an tâm hơn.                     |
+| Task đủ hẹp chưa?     | Có: demo một flow AI gợi ý top 3 vé thay vì build toàn bộ assistant đặt vé.                   |
+| AI decision rõ chưa?  | Có: AI xếp hạng vé theo giá, giờ đi và điểm đón gần.                                          |
+| Failure path rõ chưa? | Có: test case AI nhầm địa danh như "Giáo xứ Thanh Phong" với "Nhà xe Thanh Phong".            |
+| Có evidence không?    | Có: đã có self-use, phỏng vấn nhanh, demo lỗi và pattern từ Vexere, MoMo Travel, Google Maps. |
 
 ## 5. Quyết định: giữ, giảm scope, hay đổi hướng?
 
-| Tình huống | Quyết định |
-|---|---|
-| Evidence yếu, user mơ hồ | Dừng build sâu; quay lại research 20 phút. |
-| Ý tưởng quá rộng | Giữ domain, cắt xuống một flow. |
-| AI không cần thiết | Dùng rule/manual prototype; ghi rõ vì sao không dùng AI sâu. |
-| Rủi ro cao | Chọn augmentation hoặc conditional automation. |
-| Không demo được trong 1 ngày | Đưa phần lớn vào backlog, giữ một path nhỏ. |
+Quyết định hiện tại của nhóm:
+
+| Tình huống                   | Quyết định                                                                                   |
+| ---------------------------- | -------------------------------------------------------------------------------------------- |
+| Evidence đã chỉ ra pain rõ   | Giữ domain vé xe liên tỉnh và tiếp tục build sâu vào flow so sánh/gợi ý.                     |
+| Ý tưởng ban đầu quá rộng     | Cắt từ assistant đặt vé rộng xuống flow gợi ý top 3 vé.                                      |
+| AI nên đóng vai trò gì       | Chọn augmentation: AI gợi ý, xếp hạng và cảnh báo rủi ro thay vì tự đặt vé end-to-end.       |
+| Rủi ro cao                   | Buộc user xác nhận khi hệ thống phát hiện nhập nhằng điểm đón hoặc tên nhà xe.               |
+| Không demo được trong 1 ngày | Đưa payment thật, booking thật và dữ liệu live vào backlog; giữ mock data và deep-link demo. |
 
 ## 6. Câu chốt cuối
 
-Điền câu này trước khi rời lớp:
+Tuyên bố chốt để cả nhóm dùng thống nhất:
 
 ```text
-Dựa trên [evidence],
-nhóm sẽ build [prototype slice],
-cho [user],
-để giải quyết [pain],
-bằng cách AI [augment/automate task],
-và sẽ test failure path [failure mode].
+Dựa trên evidence từ self-use, phỏng vấn nhanh, demo lỗi NER và competitor review,
+nhóm sẽ build flow AI gợi ý top 3 vé xe liên tỉnh cho người đi tỉnh định kỳ.
+Mục tiêu là giảm thời gian so sánh giá, giờ đi và điểm đón.
+AI sẽ đóng vai trò augmentation trong việc xếp hạng và cảnh báo các case nhập nhằng,
+đồng thời nhóm sẽ test failure path khi AI chọn nhầm địa danh hoặc điểm đón.
 ```
 
 ## 7. Backlog
 
-Những thứ **không build trong Day 06**:
+Những phần **không build trong Day 06**:
 
-- 
-- 
-- 
+- Tích hợp thanh toán hoặc booking thật trong app
+- Đồng bộ dữ liệu vé live từ nhà xe hoặc nền tảng đối tác
+- Mở rộng xử lý NER/địa chỉ vượt ngoài các case demo trọng điểm
