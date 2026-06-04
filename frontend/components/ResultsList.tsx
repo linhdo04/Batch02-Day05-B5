@@ -5,6 +5,7 @@ import { ClarificationPanel } from "./ClarificationPanel";
 import { FailurePanel } from "./FailurePanel";
 import { PathStatus } from "./PathStatus";
 import { TicketCard } from "./TicketCard";
+import { WebResultsPanel } from "./WebResultsPanel";
 
 type ResultsListProps = {
   query: TripQuery;
@@ -22,13 +23,17 @@ export function ResultsList({ query, result, onClarify, onSuggestedDate }: Resul
     return <FailurePanel result={result} onSuggestedDate={onSuggestedDate} />;
   }
 
+  if (result.web_results.length > 0 && result.tickets.length === 0) {
+    return <WebResultsPanel query={query} result={result} />;
+  }
+
   return (
     <div className="results-stack">
       <PathStatus result={result} />
 
       <div className="result-heading">
         <div>
-          <p className="eyebrow">Top {result.tickets.length} lựa chọn</p>
+          <p className="eyebrow">Top {result.tickets.length} phương án</p>
           <h2>
             {query.from_city} → {query.to_city}
           </h2>

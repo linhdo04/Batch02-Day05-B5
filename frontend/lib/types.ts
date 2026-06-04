@@ -1,5 +1,7 @@
 export type Priority = "price" | "time" | "pickup_distance";
 
+export type TransportMode = "all" | "bus" | "train" | "flight";
+
 export type PathType = "happy" | "low_confidence" | "failure" | "clarification";
 
 export type ClarificationChoice = "pickup_place" | "bus_operator";
@@ -15,6 +17,7 @@ export type TripQuery = {
     lng: number;
   };
   priority: Priority;
+  transport_mode: TransportMode;
 };
 
 export type TicketOption = {
@@ -38,10 +41,18 @@ export type TicketOption = {
   pickup_lng?: number;
 };
 
+export type WebSearchResult = {
+  title: string;
+  url: string;
+  snippet: string;
+  source: string;
+};
+
 export type AgentResponse = {
   path: PathType;
   summary: string;
   tickets: TicketOption[];
+  web_results: WebSearchResult[];
   warning: string | null;
   clarification_question: string | null;
   clarification_options: ClarificationChoice[];

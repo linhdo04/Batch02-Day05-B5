@@ -9,6 +9,13 @@ class Priority(str, Enum):
     pickup_distance = "pickup_distance"
 
 
+class TransportMode(str, Enum):
+    all = "all"
+    bus = "bus"
+    train = "train"
+    flight = "flight"
+
+
 class PathType(str, Enum):
     happy = "happy"
     low_confidence = "low_confidence"
@@ -34,6 +41,7 @@ class TripQuery(BaseModel):
     pickup_text: str = Field(default="")
     user_location: UserLocation = Field(default_factory=UserLocation)
     priority: Priority = Priority.price
+    transport_mode: TransportMode = TransportMode.bus
 
 
 class TicketOption(BaseModel):
@@ -54,10 +62,18 @@ class TicketOption(BaseModel):
     rank_reason: str
 
 
+class WebSearchResult(BaseModel):
+    title: str
+    url: str
+    snippet: str = ""
+    source: str = "Tavily"
+
+
 class AgentResponse(BaseModel):
     path: PathType
     summary: str
     tickets: list[TicketOption] = Field(default_factory=list)
+    web_results: list[WebSearchResult] = Field(default_factory=list)
     warning: str | None = None
     clarification_question: str | None = None
     clarification_options: list[ClarificationChoice] = Field(default_factory=list)
