@@ -69,6 +69,20 @@ class ClarificationRequest(BaseModel):
     choice: ClarificationChoice
 
 
+class ChatMessage(BaseModel):
+    role: str
+    text: str
+
+
+class ChatRequest(BaseModel):
+    message: str
+    history: list[ChatMessage] = []
+
+
+class ChatResponse(BaseModel):
+    reply: str
+
+
 class HealthResponse(BaseModel):
     status: str
 

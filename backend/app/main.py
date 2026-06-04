@@ -1,8 +1,15 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.app.agent.service import clarify_trip, search_trip
-from backend.app.schemas import AgentResponse, ClarificationRequest, HealthResponse, TripQuery
+from backend.app.agent.service import clarify_trip, search_trip, chat_agent
+from backend.app.schemas import (
+    AgentResponse,
+    ClarificationRequest,
+    HealthResponse,
+    TripQuery,
+    ChatRequest,
+    ChatResponse,
+)
 
 app = FastAPI(
     title="SmartBus AI",
@@ -35,3 +42,8 @@ def search(query: TripQuery) -> AgentResponse:
 @app.post("/api/clarify", response_model=AgentResponse)
 def clarify(request: ClarificationRequest) -> AgentResponse:
     return clarify_trip(request)
+
+
+@app.post("/api/chat", response_model=ChatResponse)
+def chat(request: ChatRequest) -> ChatResponse:
+    return ChatResponse(reply=chat_agent(request))

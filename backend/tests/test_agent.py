@@ -41,3 +41,23 @@ def test_clarify_pickup_place_returns_ranked_options() -> None:
     assert response.path == PathType.low_confidence
     assert response.tickets
     assert "địa danh" in response.warning
+
+
+def test_chat_agent_detects_ambiguity() -> None:
+    from backend.app.agent.service import chat_agent
+    from backend.app.schemas import ChatRequest
+
+    req = ChatRequest(message="đón tôi ở Thanh Phong")
+    reply = chat_agent(req)
+    assert "Giáo xứ Thanh Phong" in reply or "Nhà xe Thanh Phong" in reply
+    assert "Bạn muốn" in reply or "nhập nhằng" in reply
+
+
+def test_chat_agent_finds_tickets() -> None:
+    from backend.app.agent.service import chat_agent
+    from backend.app.schemas import ChatRequest
+
+    req = ChatRequest(message="tìm vé từ Hà Nội đi Đà Nẵng ngày 6/6/2026")
+    reply = chat_agent(req)
+    assert "Sao Viet Express" in reply or "Queen Cafe VIP" in reply
+    assert "390,000" in reply or "420,000" in reply
