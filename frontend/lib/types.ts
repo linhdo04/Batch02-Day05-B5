@@ -33,6 +33,9 @@ export type TicketOption = {
   booking_url: string;
   maps_url: string;
   rank_reason: string;
+  // Tọa độ điểm đón (optional - cho Google Maps)
+  pickup_lat?: number;
+  pickup_lng?: number;
 };
 
 export type AgentResponse = {

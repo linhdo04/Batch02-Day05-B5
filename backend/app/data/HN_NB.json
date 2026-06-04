@@ -1,0 +1,88 @@
+{
+  "region": "North_Vietnam",
+  "route_group": "HAN-NBH",
+  "updated_at": "2026-06-04T10:00:00Z",
+  "operators": [
+    {
+      "operator_id": "OP_XEVN",
+      "name": "X.E Việt Nam",
+      "type": "Limousine",
+      "contact_phone": "1900 1731",
+      "routes": [
+        {
+          "route_id": "XEVN_HAN_NBH_CG",
+          "route_name": "Hà Nội (Cầu Giấy) - TP Ninh Bình",
+          "direction": "Hà Nội -> Ninh Bình",
+          "base_price_vnd": 155000,
+          "transit_supported": true,
+          "waypoints": [
+            { "order": 1, "node_name": "Công viên Cầu Giấy (Cổng Trương Công Giai)", "type": "terminal", "eta_offset_mins": 0 },
+            { "order": 2, "node_name": "Ngã tư Phạm Hùng (Cổng BigC Thăng Long)", "type": "pickup", "eta_offset_mins": 15 },
+            { "order": 3, "node_name": "Nút giao Vực Vòng (Đồng Văn, Hà Nam)", "type": "dropoff", "eta_offset_mins": 60 },
+            { "order": 4, "node_name": "VP Ninh Bình (Giao Thủy, TP NB)", "type": "terminal", "eta_offset_mins": 90 },
+            { "order": 5, "node_name": "Nội thành TP Ninh Bình", "type": "dropoff_transit", "eta_offset_mins": 105 }
+          ]
+        },
+        {
+          "route_id": "XEVN_HAN_NBH_RX",
+          "route_name": "Hà Nội (Rạp Xiếc) - TP Ninh Bình",
+          "direction": "Hà Nội -> Ninh Bình",
+          "base_price_vnd": 155000,
+          "transit_supported": true,
+          "waypoints": [
+            { "order": 1, "node_name": "Rạp Xiếc Trung Ương (Trần Nhân Tông)", "type": "terminal", "eta_offset_mins": 0 },
+            { "order": 2, "node_name": "283 Lê Duẩn", "type": "pickup", "eta_offset_mins": 10 },
+            { "order": 3, "node_name": "Bệnh viện Bạch Mai / Giải Phóng", "type": "pickup", "eta_offset_mins": 20 },
+            { "order": 4, "node_name": "VP Ninh Bình (Giao Thủy, TP NB)", "type": "terminal", "eta_offset_mins": 100 }
+          ]
+        }
+      ]
+    },
+    {
+      "operator_id": "OP_TRANGAN",
+      "name": "Tràng An Limousine",
+      "type": "Limousine VIP",
+      "contact_phone": "1900 0336",
+      "routes": [
+        {
+          "route_id": "TA_NOIBAI_NBH_TOUR",
+          "route_name": "Sân bay Nội Bài - Tràng An / Bái Đính",
+          "direction": "Hà Nội -> Ninh Bình",
+          "base_price_vnd": 350000,
+          "transit_supported": true,
+          "waypoints": [
+            { "order": 1, "node_name": "Sân bay Nội Bài (Sảnh E - T1)", "type": "terminal", "eta_offset_mins": 0 },
+            { "order": 2, "node_name": "Khu vực Phố Cổ Hà Nội", "type": "pickup_transit", "eta_offset_mins": 45 },
+            { "order": 3, "node_name": "Bến xe Nước Ngầm", "type": "pickup", "eta_offset_mins": 75 },
+            { "order": 4, "node_name": "Nút giao Liêm Tuyền (Phủ Lý)", "type": "dropoff", "eta_offset_mins": 120 },
+            { "order": 5, "node_name": "Thành phố Ninh Bình", "type": "dropoff", "eta_offset_mins": 150 },
+            { "order": 6, "node_name": "Bến thuyền Tràng An", "type": "terminal", "eta_offset_mins": 165 },
+            { "order": 7, "node_name": "Tam Cốc - Bích Động", "type": "terminal", "eta_offset_mins": 175 },
+            { "order": 8, "node_name": "Chùa Bái Đính", "type": "terminal", "eta_offset_mins": 190 }
+          ]
+        }
+      ]
+    },
+    {
+      "operator_id": "OP_BINHMINH",
+      "name": "Bình Minh Limousine",
+      "type": "Limousine",
+      "contact_phone": "1900 1531",
+      "routes": [
+        {
+          "route_id": "BM_HAN_NBH_MD",
+          "route_name": "Bến xe Mỹ Đình - Ninh Bình",
+          "direction": "Hà Nội -> Ninh Bình",
+          "base_price_vnd": 150000,
+          "transit_supported": false,
+          "waypoints": [
+            { "order": 1, "node_name": "Bến xe Mỹ Đình", "type": "terminal", "eta_offset_mins": 0 },
+            { "order": 2, "node_name": "Khuất Duy Tiến", "type": "pickup", "eta_offset_mins": 15 },
+            { "order": 3, "node_name": "Bến xe Giáp Bát", "type": "pickup", "eta_offset_mins": 35 },
+            { "order": 4, "node_name": "Thành phố Ninh Bình", "type": "dropoff", "eta_offset_mins": 110 }
+          ]
+        }
+      ]
+    }
+  ]
+}

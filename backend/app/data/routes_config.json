@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "id": "vungtau_saigon",
+      "name": "Vũng Tàu - Sài Gòn",
+      "data_file": "vungtau_saigon.json",
+      "cities": ["Vũng Tàu", "Vung Tau", "Bà Rịa", "Ba Ria", "Sài Gòn", "Saigon", "TP.HCM", "TPHCM", "Ho Chi Minh"],
+      "region": "South_Vietnam",
+      "active": true
+    },
+    {
+      "id": "hanoi_ninhbinh",
+      "name": "Hà Nội - Ninh Bình",
+      "data_file": "HN_NB.json",
+      "cities": ["Hà Nội", "Ha Noi", "Hanoi", "Ninh Bình", "Ninh Binh"],
+      "region": "North_Vietnam",
+      "active": true
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "region": "South_Vietnam",
+  "route_group": "BRVT-SGN",
+  "updated_at": "2026-06-04T10:00:00Z",
+  "operators": [
+    {
+      "operator_id": "OP_TOANTHANG",
+      "name": "Toàn Thắng Limousine",
+      "type": "Limousine",
+      "contact_phone": "1900 6968",
+      "routes": [
+        {
+          "route_id": "TT_VT_SGN_TSN",
+          "route_name": "Vũng Tàu - Sân Bay Tân Sơn Nhất",
+          "direction": "Vũng Tàu -> TP.HCM",
+          "base_price_vnd": 200000,
+          "transit_supported": true,
+          "waypoints": [
+            { "order": 1, "node_name": "Nội thành Vũng Tàu", "type": "pickup_transit", "eta_offset_mins": 0, "lat": 10.3460, "lng": 107.0843 },
+            { "order": 2, "node_name": "VP Vũng Tàu (439 Bình Giã)", "type": "terminal", "eta_offset_mins": 15, "lat": 10.3524, "lng": 107.0925 },
+            { "order": 3, "node_name": "Cảng Cát Lở", "type": "pickup", "eta_offset_mins": 25, "lat": 10.3369, "lng": 107.0725 },
+            { "order": 4, "node_name": "Nhà thờ Phước Thành", "type": "pickup", "eta_offset_mins": 30, "lat": 10.4050, "lng": 107.1369 },
+            { "order": 5, "node_name": "Co.op Mart Bà Rịa", "type": "pickup", "eta_offset_mins": 45, "lat": 10.5063, "lng": 107.1639 },
+            { "order": 6, "node_name": "Nút giao An Phú (Mai Chí Thọ)", "type": "dropoff", "eta_offset_mins": 120, "lat": 10.8021, "lng": 106.7444 },
+            { "order": 7, "node_name": "Dọc Điện Biên Phủ", "type": "dropoff", "eta_offset_mins": 130, "lat": 10.7722, "lng": 106.6951 },
+            { "order": 8, "node_name": "Công viên Lê Văn Tám", "type": "dropoff", "eta_offset_mins": 135, "lat": 10.7703, "lng": 106.6888 },
+            { "order": 9, "node_name": "Đường Nam Kỳ Khởi Nghĩa", "type": "dropoff", "eta_offset_mins": 140, "lat": 10.7768, "lng": 106.7009 },
+            { "order": 10, "node_name": "Sân bay Tân Sơn Nhất - Ga Quốc Nội", "type": "terminal", "eta_offset_mins": 150, "lat": 10.8187, "lng": 106.6519 },
+            { "order": 11, "node_name": "Sân bay Tân Sơn Nhất - Ga Quốc Tế", "type": "terminal", "eta_offset_mins": 155, "lat": 10.8187, "lng": 106.6519 }
+          ]
+        },
+        {
+          "route_id": "TT_VT_SGN_XLHN",
+          "route_name": "Vũng Tàu - Bến Xe Miền Đông (Xa lộ Hà Nội)",
+          "direction": "Vũng Tàu -> TP.HCM",
+          "base_price_vnd": 160000,
+          "transit_supported": true,
+          "waypoints": [
+            { "order": 1, "node_name": "VP Vũng Tàu (439 Bình Giã)", "type": "terminal", "eta_offset_mins": 0, "lat": 10.3524, "lng": 107.0925 },
+            { "order": 2, "node_name": "Co.op Mart Bà Rịa", "type": "pickup", "eta_offset_mins": 30, "lat": 10.5063, "lng": 107.1639 },
+            { "order": 3, "node_name": "Ngã ba Vũng Tàu", "type": "dropoff", "eta_offset_mins": 90, "lat": 10.7293, "lng": 106.7195 },
+            { "order": 4, "node_name": "Bến xe Miền Đông Mới", "type": "dropoff", "eta_offset_mins": 100, "lat": 10.8528, "lng": 106.8056 },
+            { "order": 5, "node_name": "Khu Du Lịch Suối Tiên", "type": "dropoff", "eta_offset_mins": 105, "lat": 10.8700, "lng": 106.8200 },
+            { "order": 6, "node_name": "Khu Công Nghệ Cao (Quận 9)", "type": "dropoff", "eta_offset_mins": 110, "lat": 10.8500, "lng": 106.7800 },
+            { "order": 7, "node_name": "Ngã tư Thủ Đức", "type": "dropoff", "eta_offset_mins": 115, "lat": 10.8463, "lng": 106.7676 },
+            { "order": 8, "node_name": "Ngã tư Bình Thái", "type": "dropoff", "eta_offset_mins": 120, "lat": 10.8372, "lng": 106.7594 },
+            { "order": 9, "node_name": "Trạm thu phí Xa lộ Hà Nội", "type": "dropoff", "eta_offset_mins": 125, "lat": 10.8200, "lng": 106.7400 },
+            { "order": 10, "node_name": "Ngã tư Hàng Xanh", "type": "dropoff", "eta_offset_mins": 135, "lat": 10.7994, "lng": 106.7013 },
+            { "order": 11, "node_name": "Bến xe Miền Đông Cũ", "type": "terminal", "eta_offset_mins": 145, "lat": 10.8150, "lng": 106.7117 }
+          ]
+        }
+      ]
+    },
+    {
+      "operator_id": "OP_HOAMAI",
+      "name": "Hoa Mai Limousine",
+      "type": "Limousine",
+      "contact_phone": "1900 599997",
+      "routes": [
+        {
+          "route_id": "HM_VT_SGN_Q1",
+          "route_name": "Vũng Tàu - Quận 1 (Cao Tốc)",
+          "direction": "Vũng Tàu -> TP.HCM",
+          "base_price_vnd": 200000,
+          "transit_supported": true,
+          "waypoints": [
+            { "order": 1, "node_name": "Nội thành Vũng Tàu", "type": "pickup_transit", "eta_offset_mins": 0, "lat": 10.3460, "lng": 107.0843 },
+            { "order": 2, "node_name": "VP Vũng Tàu (47 Trưng Nhị)", "type": "terminal", "eta_offset_mins": 15, "lat": 10.3483, "lng": 107.0824 },
+            { "order": 3, "node_name": "Co.op Mart Bà Rịa", "type": "pickup", "eta_offset_mins": 45, "lat": 10.5063, "lng": 107.1639 },
+            { "order": 4, "node_name": "Ngã ba Long Sơn", "type": "pickup", "eta_offset_mins": 55, "lat": 10.6200, "lng": 107.0500 },
+            { "order": 5, "node_name": "Nút giao An Phú (Mai Chí Thọ)", "type": "dropoff", "eta_offset_mins": 115, "lat": 10.8021, "lng": 106.7444 },
+            { "order": 6, "node_name": "Khu đô thị Sala", "type": "dropoff", "eta_offset_mins": 120, "lat": 10.7887, "lng": 106.7215 },
+            { "order": 7, "node_name": "Hầm Thủ Thiêm", "type": "dropoff", "eta_offset_mins": 125, "lat": 10.7778, "lng": 106.7053 },
+            { "order": 8, "node_name": "VP Quận 1 (83 Nguyễn Thái Bình)", "type": "terminal", "eta_offset_mins": 135, "lat": 10.7707, "lng": 106.6906 }
+          ]
+        }
+      ]
+    },
+    {
+      "operator_id": "OP_VIE",
+      "name": "Vie Limousine",
+      "type": "Limousine VIP",
+      "contact_phone": "1900 1131",
+      "routes": [
+        {
+          "route_id": "VIE_VT_SGN_Q1",
+          "route_name": "Vũng Tàu - Quận 1 (Ghế Massage)",
+          "direction": "Vũng Tàu -> TP.HCM",
+          "base_price_vnd": 220000,
+          "transit_supported": true,
+          "waypoints": [
+            { "order": 1, "node_name": "VP Vũng Tàu (33 Đường 3/2)", "type": "terminal", "eta_offset_mins": 0, "lat": 10.3441, "lng": 107.0883 },
+            { "order": 2, "node_name": "Co.op Mart Bà Rịa", "type": "pickup", "eta_offset_mins": 30, "lat": 10.5063, "lng": 107.1639 },
+            { "order": 3, "node_name": "Nút giao An Phú", "type": "dropoff", "eta_offset_mins": 100, "lat": 10.8021, "lng": 106.7444 },
+            { "order": 4, "node_name": "Mai Chí Thọ", "type": "dropoff", "eta_offset_mins": 105, "lat": 10.8000, "lng": 106.7350 },
+            { "order": 5, "node_name": "VP Quận 1 (131 Nguyễn Thái Bình)", "type": "terminal", "eta_offset_mins": 120, "lat": 10.7707, "lng": 106.6906 }
+          ]
+        },
+        {
+          "route_id": "VIE_VT_SGN_Q9",
+          "route_name": "Vũng Tàu - Hàng Xanh - Khu Đông",
+          "direction": "Vũng Tàu -> TP.HCM",
+          "base_price_vnd": 220000,
+          "transit_supported": true,
+          "waypoints": [
+             { "order": 1, "node_name": "VP Vũng Tàu (33 Đường 3/2)", "type": "terminal", "eta_offset_mins": 0, "lat": 10.3441, "lng": 107.0883 },
+             { "order": 2, "node_name": "Co.op Mart Bà Rịa", "type": "pickup", "eta_offset_mins": 30, "lat": 10.5063, "lng": 107.1639 },
+             { "order": 3, "node_name": "Khu Công Nghệ Cao (Quận 9)", "type": "dropoff", "eta_offset_mins": 95, "lat": 10.8500, "lng": 106.7800 },
+             { "order": 4, "node_name": "Ngã tư Thủ Đức", "type": "dropoff", "eta_offset_mins": 100, "lat": 10.8463, "lng": 106.7676 },
+             { "order": 5, "node_name": "Ngã tư Hàng Xanh", "type": "dropoff", "eta_offset_mins": 115, "lat": 10.7994, "lng": 106.7013 }
+          ]
+        }
+      ]
+    },
+    {
+      "operator_id": "OP_ANHQUOC",
+      "name": "Anh Quốc Limousine",
+      "type": "Limousine",
+      "contact_phone": "1900 3300",
+      "routes": [
+        {
+          "route_id": "AQ_VT_SGN_TSN",
+          "route_name": "Vũng Tàu - Sân Bay Tân Sơn Nhất",
+          "direction": "Vũng Tàu -> TP.HCM",
+          "base_price_vnd": 200000,
+          "transit_supported": true,
+          "waypoints": [
+            { "order": 1, "node_name": "Nội thành Vũng Tàu", "type": "pickup_transit", "eta_offset_mins": 0, "lat": 10.3460, "lng": 107.0843 },
+            { "order": 2, "node_name": "VP Vũng Tàu (108 Lê Hồng Phong)", "type": "terminal", "eta_offset_mins": 15, "lat": 10.3464, "lng": 107.0830 },
+            { "order": 3, "node_name": "Co.op Mart Bà Rịa", "type": "pickup", "eta_offset_mins": 45, "lat": 10.5063, "lng": 107.1639 },
+            { "order": 4, "node_name": "Dọc Điện Biên Phủ", "type": "dropoff", "eta_offset_mins": 125, "lat": 10.7722, "lng": 106.6951 },
+            { "order": 5, "node_name": "Công viên Hoàng Văn Thụ", "type": "dropoff", "eta_offset_mins": 140, "lat": 10.7911, "lng": 106.6764 },
+            { "order": 6, "node_name": "Sân bay Tân Sơn Nhất", "type": "terminal", "eta_offset_mins": 150, "lat": 10.8187, "lng": 106.6519 }
+          ]
+        }
+      ]
+    },
+    {
+      "operator_id": "OP_FUTA",
+      "name": "Phương Trang (FUTA Bus Lines)",
+      "type": "Bus/Sleeper",
+      "contact_phone": "1900 6067",
+      "routes": [
+        {
+          "route_id": "FUTA_VT_SGN_BXM",
+          "route_name": "Vũng Tàu - Bến Xe Miền Tây",
+          "direction": "Vũng Tàu -> TP.HCM",
+          "base_price_vnd": 170000,
+          "transit_supported": true,
+          "waypoints": [
+            { "order": 1, "node_name": "Bến xe Vũng Tàu", "type": "terminal", "eta_offset_mins": 0, "lat": 10.3450, "lng": 107.0900 },
+            { "order": 2, "node_name": "Bến xe Bà Rịa", "type": "pickup", "eta_offset_mins": 30, "lat": 10.5050, "lng": 107.1600 },
+            { "order": 3, "node_name": "Trạm dừng chân Cao tốc", "type": "dropoff", "eta_offset_mins": 90, "lat": 10.7000, "lng": 106.8000 },
+            { "order": 4, "node_name": "Bến xe Miền Tây", "type": "terminal", "eta_offset_mins": 150, "lat": 10.7397, "lng": 106.6108 }
+          ]
+        }
+      ]
+    }
+  ]
+}

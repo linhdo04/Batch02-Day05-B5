@@ -123,8 +123,56 @@ npm run test:e2e
 
 ```text
 backend/        FastAPI app, schemas, agent tools, mock ticket data
+  app/agent/    
+    tools.py    ✨ Google Maps Distance Tool (NEW!)
+    service.py  Agent logic với 4 paths
+    ranking.py  Xếp hạng theo giá/giờ/khoảng cách
 frontend/       Next.js UI cho search, correction, failure, clarification
 tests/e2e/      Playwright UI tests
-docs/           Demo script và test report
+docs/           Demo script, test report, Google Maps integration guide
 02-group-spec/  Evidence pack và thin SPEC bản nhóm
 ```
+
+---
+
+## ✨ NEW: Google Maps Distance Tool
+
+### Tính năng mới
+
+SmartBus AI giờ đã tích hợp **Google Maps Distance Tool** để:
+
+- ✅ Tính khoảng cách thực từ vị trí user đến các điểm đón
+- ✅ Tìm điểm đón gần nhất tự động
+- ✅ Tạo link Google Maps dẫn đường cho user
+- ✅ Hoạt động 100% **không cần API key** (dùng Haversine fallback)
+
+### Quick Start
+
+```bash
+# Test distance tool
+python -m backend.app.agent.distance_example
+
+# Test full system
+python test_full_api.py
+
+# Run all tests (should see 13/13 pass)
+python -m pytest backend/tests/test_agent.py -v
+```
+
+### Tài liệu
+
+- **Full guide:** [`docs/google-maps-integration.md`](docs/google-maps-integration.md)
+- **Quick summary:** [`docs/DISTANCE_TOOL_SUMMARY.md`](docs/DISTANCE_TOOL_SUMMARY.md)
+- **Demo workflow:** [`DEMO_WORKFLOW.md`](DEMO_WORKFLOW.md)
+- **Test results:** [`TEST_RESULTS_SUMMARY.md`](TEST_RESULTS_SUMMARY.md)
+
+### API Key (Optional)
+
+Nếu có Google Maps API key, tạo file `.env`:
+
+```bash
+GOOGLE_MAPS_API_KEY=your_key_here
+GEMINI_API_KEY=your_gemini_key_here
+```
+
+**Lưu ý:** Hệ thống vẫn hoạt động hoàn hảo không cần API key!

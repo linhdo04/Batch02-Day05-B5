@@ -38,7 +38,12 @@ export function ResultsList({ query, result, onClarify, onSuggestedDate }: Resul
 
       <div className="ticket-list" data-testid="ticket-list">
         {result.tickets.map((ticket, index) => (
-          <TicketCard key={ticket.id} rank={index + 1} ticket={ticket} />
+          <TicketCard 
+            key={ticket.id} 
+            rank={index + 1} 
+            ticket={ticket}
+            userLocation={query.user_location}
+          />
         ))}
       </div>
     </div>
